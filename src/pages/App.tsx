@@ -25,6 +25,7 @@ import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
+import backgroundImage from "../assets/images/pdex_background.svg";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -60,6 +61,19 @@ const BodyWrapper = styled.div`
 
 const Marginer = styled.div`
   margin-top: 5rem;
+`
+
+const BackgroundImage = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url('${backgroundImage}');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #040229;
 `
 
 function TopLevelModals() {
@@ -104,6 +118,7 @@ export default function App() {
             </Switch>
           </Web3ReactManager>
           <Marginer />
+          <BackgroundImage />
         </BodyWrapper>
       </AppWrapper>
     </Suspense>
