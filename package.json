@@ -1,6 +1,6 @@
 {
-  "name": "@uniswap/interface",
-  "description": "Uniswap Interface",
+  "name": "@dpex/interface",
+  "description": "Decentralize Passive Income Exchange Interface",
   "homepage": ".",
   "private": true,
   "devDependencies": {
