@@ -4,7 +4,6 @@ import { useLocation } from 'react-router'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
 import useParsedQueryString from '../../hooks/useParsedQueryString'
-import useToggledVersion, { DEFAULT_VERSION, Version } from '../../hooks/useToggledVersion'
 
 import { StyledInternalLink } from '../../theme'
 import { YellowCard } from '../Card'
@@ -24,7 +23,7 @@ function VersionLinkContainer({ children }: { children: React.ReactNode }) {
   )
 }
 
-export default function BetterTradeLink({ version }: { version: Version }) {
+export default function BetterTradeLink() {
   const location = useLocation()
   const search = useParsedQueryString()
 
@@ -33,16 +32,16 @@ export default function BetterTradeLink({ version }: { version: Version }) {
       ...location,
       search: `?${stringify({
         ...search,
-        use: version !== DEFAULT_VERSION ? version : undefined
+        use: 'V2'
       })}`
     }
-  }, [location, search, version])
+  }, [location, search])
 
   return (
     <VersionLinkContainer>
       There is a better price for this trade on{' '}
       <StyledInternalLink to={linkDestination}>
-        <b>Uniswap {version.toUpperCase()} ↗</b>
+        <b>Uniswap V2 ↗</b>
       </StyledInternalLink>
     </VersionLinkContainer>
   )
@@ -51,23 +50,22 @@ export default function BetterTradeLink({ version }: { version: Version }) {
 export function DefaultVersionLink() {
   const location = useLocation()
   const search = useParsedQueryString()
-  const version = useToggledVersion()
 
   const linkDestination = useMemo(() => {
     return {
       ...location,
       search: `?${stringify({
         ...search,
-        use: DEFAULT_VERSION
+        use: 'V2'
       })}`
     }
   }, [location, search])
 
   return (
     <VersionLinkContainer>
-      Showing {version.toUpperCase()} price.{' '}
+      Showing V2 price.{' '}
       <StyledInternalLink to={linkDestination}>
-        <b>Switch to Uniswap {DEFAULT_VERSION.toUpperCase()} ↗</b>
+        <b>Switch to Uniswap V2 ↗</b>
       </StyledInternalLink>
     </VersionLinkContainer>
   )

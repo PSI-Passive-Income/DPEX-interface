@@ -17,6 +17,7 @@ const Tabs = styled.div`
   align-items: center;
   border-radius: 3rem;
   justify-content: space-evenly;
+  z-index: 1;
 `
 
 const activeClassName = 'ACTIVE'

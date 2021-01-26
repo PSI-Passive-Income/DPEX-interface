@@ -1,9 +1,17 @@
-import { ChainId, JSBI, Percent, Token, WETH } from '@uniswap/sdk'
+import { ChainId, JSBI, Percent, Token, WETH } from '@passive-income/dpex-sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x708723127BDD894Fc2699F4AAd29b727A861835c'
+export const DEFAULT_CHAIN = ChainId.MAINNET
+
+export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
+  [ChainId.MAINNET]: '0xb383D76976755f2ce66f0031fBFAE9f6786ab1c6',
+  [ChainId.RINKEBY]: '0xb383D76976755f2ce66f0031fBFAE9f6786ab1c6',
+  [ChainId.ROPSTEN]: '0xb383D76976755f2ce66f0031fBFAE9f6786ab1c6',
+  [ChainId.GÖRLI]: '0xb383D76976755f2ce66f0031fBFAE9f6786ab1c6',
+  [ChainId.KOVAN]: '0xb383D76976755f2ce66f0031fBFAE9f6786ab1c6'
+}
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
@@ -29,24 +37,25 @@ export const PROPOSAL_LENGTH_IN_SECS = AVERAGE_BLOCK_TIME_IN_SECS * PROPOSAL_LEN
 
 export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
 
-const UNI_ADDRESS = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
-export const UNI: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNI', 'Uniswap')
+export const PSI_ADDRESS: { [chainId in ChainId]: string } = {
+  [ChainId.MAINNET]: '0xD4Cb461eACe80708078450e465881599d2235f1A',
+  [ChainId.RINKEBY]: '0xD4Cb461eACe80708078450e465881599d2235f1A',
+  [ChainId.ROPSTEN]: '0xD4Cb461eACe80708078450e465881599d2235f1A',
+  [ChainId.GÖRLI]: '0xD4Cb461eACe80708078450e465881599d2235f1A',
+  [ChainId.KOVAN]: '0x92FcE27e6b5F86237D2B1974266D27C2788fa237'
+}
+export const PSI: { [chainId in ChainId]: Token } = {
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, PSI_ADDRESS[ChainId.MAINNET], 9, 'PSI', 'passive.income'),
+  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, PSI_ADDRESS[ChainId.RINKEBY], 9, 'PSI', 'passive.income'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, PSI_ADDRESS[ChainId.ROPSTEN], 9, 'PSI', 'passive.income'),
+  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, PSI_ADDRESS[ChainId.GÖRLI], 9, 'PSI', 'passive.income'),
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, PSI_ADDRESS[ChainId.KOVAN], 9, 'PSI', 'passive.income')
 }
 
-export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
-  [UNI_ADDRESS]: 'UNI',
-  [TIMELOCK_ADDRESS]: 'Timelock'
-}
-
-// TODO: specify merkle distributor for mainnet
-export const MERKLE_DISTRIBUTOR_ADDRESS: { [chainId in ChainId]?: string } = {
-  [ChainId.MAINNET]: '0x090D4613473dEE047c3f2706764f49E0821D256e'
-}
+// export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
+//   [PSI_ADDRESS]: 'PSI',
+//   [TIMELOCK_ADDRESS]: 'Timelock'
+// }
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],

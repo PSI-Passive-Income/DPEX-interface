@@ -1,5 +1,5 @@
 {
-  "name": "Uniswap Default List",
+  "name": "DPEX Default List",
   "timestamp": "2021-01-11T23:59:53.688Z",
   "version": {
     "major": 1,
@@ -8,7 +8,7 @@
   },
   "tags": {},
   "logoURI": "ipfs://QmNa8mQkrNKp1WEEeGjFezDmDeodkWRevGFN8JCV7b4Xir",
-  "keywords": ["uniswap", "default"],
+  "keywords": ["dpex", "default"],
   "tokens": [
     {
       "chainId": 1,
@@ -201,6 +201,22 @@
       "decimals": 18,
       "chainId": 1,
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4575f41308EC1483f3d399aa9a2826d74Da13Deb/logo.png"
+    },
+    {
+      "name": "Passive.Income",
+      "address": "0xD4Cb461eACe80708078450e465881599d2235f1A",
+      "symbol": "PSI",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "https://assets.coingecko.com/coins/images/13695/small/logo_psi.jpg"
+    },
+    {
+      "name": "Passive.Income",
+      "address": "0x92FcE27e6b5F86237D2B1974266D27C2788fa237",
+      "symbol": "PSI",
+      "decimals": 9,
+      "chainId": 42,
+      "logoURI": "https://assets.coingecko.com/coins/images/13695/small/logo_psi.jpg"
     },
     {
       "name": "Republic Token",

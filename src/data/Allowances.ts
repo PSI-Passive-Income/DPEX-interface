@@ -1,4 +1,4 @@
-import { Token, TokenAmount } from '@uniswap/sdk'
+import { Token, TokenAmount } from '@passive-income/dpex-sdk'
 import { useMemo } from 'react'
 
 import { useTokenContract } from '../hooks/useContract'

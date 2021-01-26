@@ -10,6 +10,7 @@ const StyledSwapHeader = styled.div`
   width: 100%;
   max-width: 420px;
   color: ${({ theme }) => theme.text2};
+  z-index: 1;
 `
 
 export default function SwapHeader() {

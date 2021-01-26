@@ -43,6 +43,7 @@ const BlueCardStyled = styled(Card)`
   color: ${({ theme }) => theme.primary1};
   border-radius: 12px;
   width: fit-content;
+  z-index: 1;
 `
 
 export const BlueCard = ({ children, ...rest }: CardProps) => {
