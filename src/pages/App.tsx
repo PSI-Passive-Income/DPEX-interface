@@ -60,7 +60,7 @@ const Marginer = styled.div`
 `
 
 const BackgroundImage = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
