@@ -142,6 +142,8 @@ export function useSwapCallback(
                     switch (callError.reason) {
                       case 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT':
                       case 'UniswapV2Router: EXCESSIVE_INPUT_AMOUNT':
+                      case 'DPexRouter: INSUFFICIENT_OUTPUT_AMOUNT':
+                      case 'DPexRouter: EXCESSIVE_INPUT_AMOUNT':
                         errorMessage =
                           'This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.'
                         break
