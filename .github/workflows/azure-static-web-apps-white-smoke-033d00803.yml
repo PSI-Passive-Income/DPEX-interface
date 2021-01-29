@@ -31,6 +31,11 @@ jobs:
           api_location: "api" # Api source code path - optional
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+        env:
+          REACT_APP_CHAIN_ID: "42"
+          REACT_APP_NETWORK_URL: "https://kovan.infura.io/v3/0953ace2675d4c0bb5ddf566a9304cb3"
+          REACT_APP_FORMATIC_KEY: "pk_test_561061E73B9C526C"
+          REACT_APP_PORTIS_ID: "6623d27c-8327-4dde-9ff1-714791c6769a"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
