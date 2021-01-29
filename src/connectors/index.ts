@@ -7,11 +7,16 @@ import { PortisConnector } from '@web3-react/portis-connector'
 import { FortmaticConnector } from './Fortmatic'
 import { NetworkConnector } from './NetworkConnector'
 
-const NETWORK_URL = process.env.REACT_APP_NETWORK_URL
-const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
-const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
+// const NETWORK_URL = process.env.REACT_APP_NETWORK_URL
+// const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
+// const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
+// const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
+const NETWORK_URL = 'https://kovan.infura.io/v3/0953ace2675d4c0bb5ddf566a9304cb3'
+const FORMATIC_KEY = 'pk_test_561061E73B9C526C'
+const PORTIS_ID = '6623d27c-8327-4dde-9ff1-714791c6769a'
+const CHAIN_ID = '42'
 
-export const NETWORK_CHAIN_ID: number = parseInt(process.env.REACT_APP_CHAIN_ID ?? '1')
+export const NETWORK_CHAIN_ID: number = parseInt(CHAIN_ID ?? '1')
 
 if (typeof NETWORK_URL === 'undefined') {
   throw new Error(`REACT_APP_NETWORK_URL must be a defined environment variable`)
