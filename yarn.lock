@@ -1985,10 +1985,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@passive-income/dpex-sdk@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@passive-income/dpex-sdk/-/dpex-sdk-3.0.3.tgz#c708a484cfbd97e215907a2d1d4f5169d0d1ff15"
-  integrity sha512-ZPoTaSZxOD8sXcK1i3giwcG6frbfLIne9aZp33EHJlBk0bhAyAqRi7UZoFGAx+ojqwwgMW2+6DNsbN3qcOZyAA==
+"@passive-income/dpex-sdk@^3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@passive-income/dpex-sdk/-/dpex-sdk-3.0.5.tgz#778e5967b23b68bbeecdb56dd1718672dc3a91fa"
+  integrity sha512-eoM7Fl/Tian32JnE8PgmF3oT9YdBvXZzw+/DuM0QqfSjAjYdQiWeSpkebH1JaXPdTLX58hgUNFXw4/4NlsxDNQ==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
