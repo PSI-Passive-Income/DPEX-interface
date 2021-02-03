@@ -11,10 +11,10 @@ import { NetworkConnector } from './NetworkConnector'
 // const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
 // const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
 // const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
-const NETWORK_URL = 'https://kovan.infura.io/v3/0953ace2675d4c0bb5ddf566a9304cb3'
-const FORMATIC_KEY = 'pk_test_561061E73B9C526C'
+const NETWORK_URL = 'https://mainnet.infura.io/v3/0953ace2675d4c0bb5ddf566a9304cb3'
+const FORMATIC_KEY = 'pk_live_4B3E8ED01FFAB1C3'
 const PORTIS_ID = '6623d27c-8327-4dde-9ff1-714791c6769a'
-const CHAIN_ID = '42'
+const CHAIN_ID = '1'
 
 export const NETWORK_CHAIN_ID: number = parseInt(CHAIN_ID ?? '1')
 
