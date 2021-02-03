@@ -6,7 +6,7 @@ import { fortmatic, injected, portis, walletconnect, walletlink } from '../conne
 export const DEFAULT_CHAIN = ChainId.MAINNET
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
-  [ChainId.MAINNET]: '0x466ff2466D08aB2a265b131F0d16fB9685ecC666',
+  [ChainId.MAINNET]: '0x616a530CB97E14ABdf59F4cc557c529264EC1e18',
   [ChainId.RINKEBY]: '0x466ff2466D08aB2a265b131F0d16fB9685ecC666',
   [ChainId.ROPSTEN]: '0x466ff2466D08aB2a265b131F0d16fB9685ecC666',
   [ChainId.GÖRLI]: '0x466ff2466D08aB2a265b131F0d16fB9685ecC666',
